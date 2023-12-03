@@ -29,7 +29,7 @@ This will install the packages from the requirements.txt for this project.
 '''
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.environ.get('FLASK_KEY')
+app.config['SECRET_KEY'] = os.environ.get('a')
 
 ckeditor = CKEditor(app)
 Bootstrap5(app)
@@ -56,7 +56,6 @@ gravatar = Gravatar(app,
 
 # CONNECT TO DB
 app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('db')
-print(os.environ.get('db'))
 db = SQLAlchemy()
 db.init_app(app)
 
